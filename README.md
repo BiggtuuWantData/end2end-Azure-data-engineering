@@ -10,19 +10,25 @@
 SQLServer On-premise คือ Data source โดย Data factory จะทำ ingestion จาก SQLServer หลังจากนัั้นไปเก็บที่ Data lake(Data storage) เพื่อนำข้อมูลไปทำการ transfromation โดยจะเห็นว่าได้แบ่ง DB ย่อยใน data lake เป็น 3 ระดับ คือ bronze, silver และ gold ซึ่่ง 3 tier นี้จำทำการ transform ข้อมูล จาก bronze -> silver -> gold และจากนั้น Data Synapse จำทำการดึง data จาก DB gold (Data lake) มาทำการ analytics ที่ Power Bi เพื่อทำ visualization
 ## Azure Services
 - Azure Data Factory
-- Azure Data Lake
+- Azure Data Storage Gen2
 - Azure Data Brick
 - Azure Synapse Analytics
 ## Data Source (SQLServer On-prem)
 รูป
 จากรูป คือข้อมูลใน SQLServer ที่จะนำมาทำการ ETL 
-## Data Factory
+## Data Ingestion Using Data Factory
 ![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/workflow%20datafactory.png)
 ทำการสร้าง pipeline
 - Lookup : ดึงข้อมูลจากแหล่งข้อมูล (SQLServer) มาเก็บใน pipeline เพื่อนำค่าไปใช้ต่อใน Activities อื่น ๆ
 - ForEach : ทำการ iterate table เพื่อเรียก table ที่อยู๋ schema นั้นๆมา ซึ่งใน ForEach จะที copydata
 - copy data เปรียบเหมือน data lake ทำการ store data มาเก็บไว้เพื่อไปทำ data transform ต่อไป
-## Data Lake
-## Data Brick
-## Snynapse Analytics
-## Power Bi
+## Data Transform Using Data Brick
+รูป
+1. Create Cluster
+   - setting cluster เลือก compute
+   - set node
+2. Create Notebook
+   - storagemount
+   - transform
+
+
