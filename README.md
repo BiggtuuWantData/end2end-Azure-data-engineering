@@ -21,7 +21,8 @@ SQLServer On-premise คือ Data source โดย Data factory จะทำ i
 ทำการสร้าง pipeline
 - Lookup : ดึงข้อมูลจากแหล่งข้อมูล (SQLServer) มาเก็บใน pipeline เพื่อนำค่าไปใช้ต่อใน Activities อื่น ๆ
 - ForEach : ทำการ iterate table เพื่อเรียก table ที่อยู๋ schema นั้นๆมา ซึ่งใน ForEach จะที copydata
-- copy data เปรียบเหมือน data lake ทำการ store data มาเก็บไว้เพื่อไปทำ data transform ต่อไป
+- Copy data : เปรียบเหมือน data lake ทำการ store data มาเก็บไว้เพื่อไปทำ data transform ต่อไป
+- Databrick Notebook : transform data โดยในภาพเป็นการแบ่ง notebook เป็น 2 ส่วน คือ bronze to silver และ silver to gold 
 ## Data Transform Using Data Brick
 รูป
 1. Create Cluster
