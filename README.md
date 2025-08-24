@@ -17,11 +17,10 @@ SQLServer On-premise คือ Data source โดย Data factory จะทำ i
 รูป
 จากรูป คือข้อมูลใน SQLServer ที่จะนำมาทำการ ETL 
 ## Data Factory
-รูป
+[image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/workflow%20datafactory.png)
 ทำการสร้าง pipeline
-- Lookup : ทำการดึงข้อมูลหรือ scanning จาก SQLServer เพื่อดูว่าข้อมูลนั้นมีอยู่หรือไม่
+- Lookup : ดึงข้อมูลจากแหล่งข้อมูล (SQLServer) มาเก็บใน pipeline เพื่อนำค่าไปใช้ต่อใน Activities อื่น ๆ
 - ForEach : ทำการ iterate table เพื่อเรียก table ที่อยู๋ schema นั้นๆมา ซึ่งใน ForEach จะที copydata
-          - copy data ทำการ store data table มาเก็บไว้ในนี้โดยจะมีคำสั่งในการใช้อยู่ 
 ## Data Lake
 ## Data Brick
 ## Snynapse Analytics
