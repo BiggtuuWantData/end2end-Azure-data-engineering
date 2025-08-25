@@ -14,7 +14,7 @@ SQLServer On-premise คือ Data source โดย Data factory จะทำ i
 - Azure Data Brick
 - Azure Synapse Analytics
 ## Data Source (SQLServer On-prem)
-รูป
+![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/dataset.png)
 จากรูป คือข้อมูลใน SQLServer ที่จะนำมาทำการ ETL 
 ## Data Ingestion Using Data Factory
 ![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/workflow%20datafactory.png)
