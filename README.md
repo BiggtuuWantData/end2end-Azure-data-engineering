@@ -16,6 +16,8 @@ SQLServer On-premise คือ Data source โดย Data factory จะทำ i
 ## Data Source (SQLServer On-prem)
 ![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/dataset.png)
 จากรูป คือข้อมูลใน SQLServer ที่จะนำมาทำการ ETL 
+## Setup Services
+
 ## Data Ingestion Using Data Factory
 ![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/workflow%20datafactory.png)
 ทำการสร้าง pipeline
