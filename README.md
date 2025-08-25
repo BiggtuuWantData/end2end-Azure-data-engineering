@@ -29,7 +29,9 @@ SQLServer On-premise คือ Data source โดย Data factory จะทำ i
    - setting cluster เลือก compute
    - set node
 2. Create Notebook
-   - storagemount
-   - transform
+   - storagemount : ทำการ mount กับที่อยู่ไฟล์ใน data storage gen2 เ
+   - transform : using pyspark ในการ transform data โดย notebook(bronze to silver) คือการเปลี่ยนแบบ fromat date, notebook(silver to gold) คือการเปลี่ยน column name ให้อยู่ในรูปแบบที่อ่านง่ายขึ้น
+## Synapse Analytics
+![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/pipeline%20synapse.png)
 
 
