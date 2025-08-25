@@ -17,7 +17,9 @@ SQLServer On-premise คือ Data source โดย Data factory จะทำ i
 ![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/dataset.png)
 จากรูป คือข้อมูลใน SQLServer ที่จะนำมาทำการ ETL 
 ## Setup Services
-
+- setup key-vault เพื่อกำหนด permission ในการเข้าถึงโดยเลือกที่ access control -> add -> เลือก key-vault secret user
+- activies ต่างๆจะมีให้ linked service เข้ากับ sqlserver on-prem เลือก server name, data base name ให้ตรงกับ sql local และเลือก AKV linked service -> เลือก key-vault ที่เราทำการ setup ไว้ก่อนหน้านี้
+- setup data storage gen 2 ไปที่ service data storage ที่เราสร้างไว้ -> storage -> container ทำการ add container 3 tier คือ bronze, silver, gold
 ## Data Ingestion Using Data Factory
 ![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/workflow%20datafactory.png)
 ทำการสร้าง pipeline
@@ -35,5 +37,6 @@ SQLServer On-premise คือ Data source โดย Data factory จะทำ i
    - transform : using pyspark ในการ transform data โดย notebook(bronze to silver) คือการเปลี่ยนแบบ fromat date, notebook(silver to gold) คือการเปลี่ยน column name ให้อยู่ในรูปแบบที่อ่านง่ายขึ้น
 ## Synapse Analytics
 ![image alt](https://github.com/BiggtuuWantData/end2end-Azure-data-engineering/blob/main/data%20factory/pipeline%20synapse.png)
+- สร้าง db_gold เพื่อทำการ store data 
 
 
